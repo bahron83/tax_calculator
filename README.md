@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/github/license/vintasoftware/django-react-boilerplate.svg)](LICENSE.txt)
+[![Build Status](https://travis-ci.com/bahron83/tax_calculator.svg?branch=master)](https://travis-ci.com/bahron83/tax_calculator)
 
 # Tax Calculator Sample
 This is a sample app for calculating taxes resume for shopping carts.
