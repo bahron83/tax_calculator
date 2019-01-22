@@ -3,12 +3,13 @@ python:
   - "3.6"  
 install:
   - pip install Django==2.1.5  
-  - django-admin startproject my_proj --extension py,yml,json --name Procfile,README.md,.env.example --template=https://github.com/vintasoftware/django-react-boilerplate/archive/boilerplate-release.zip  
-  - cd my_proj
+  - django-admin startproject tax_calculator --extension py,yml,json --name Procfile,README.md,.env.example --template=https://github.com/vintasoftware/django-react-boilerplate/archive/boilerplate-release.zip  
+  - cd tax_calculator
   - pip install pipenv  
   - pipenv install --dev
-  - cp my_proj/settings/local.py.example my_proj/settings/local.py
+  - cp tax_calculator/settings/local.py.example tax_calculator/settings/local.py
   - cp .env.example .env
+  - echo "INSTALLED_APPS += ('tax_calculator',)" >> tax_calculator/settings/base.py
   - pipenv run python manage.py makemigrations
   - pipenv run python manage.py migrate  
 script:
