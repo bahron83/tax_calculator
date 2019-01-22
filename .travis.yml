@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.6"  
+install:
+  - pip install pipenv  
+  - pipenv install --dev
+  - django-admin startproject my_proj --extension py,yml,json --name Procfile,README.md,.env.example --template=https://github.com/vintasoftware/django-react-boilerplate/archive/boilerplate-release.zip
+  - cd my_proj/src
+  - cp my_proj/settings/local.py.example my_proj/settings/local.py
+  - cp my_proj/settings/local.py.example my_proj/settings/local.py
+  - pipenv shell
+  - python manage.py migrate
+script:
+  - make test
