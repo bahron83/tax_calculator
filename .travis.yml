@@ -12,3 +12,4 @@ install:
   - python manage.py migrate
 script:
   - make test
+  
