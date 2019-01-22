@@ -9,6 +9,6 @@ install:
   - pipenv install --dev
   - cp my_proj/settings/local.py.example my_proj/settings/local.py
   - cp my_proj/settings/local.py.example my_proj/settings/local.py
-  - pipenv run manage.py migrate  
+  - pipenv run python manage.py migrate  
 script:
   - make test
